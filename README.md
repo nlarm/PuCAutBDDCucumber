@@ -1,2 +1,2 @@
-# PuCAutBDDCucumber
-Repositório com trabalho da equipe 3 - Adriana, Daniel e Nefi
+# TrabalhoAutomacaoPuC
+Este repositório conterá o trabalho do grupo 3 composto pela Adriana, Daniel e Nefi.
