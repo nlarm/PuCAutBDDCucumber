@@ -38,11 +38,11 @@ When('o formulario é submetido com os dados', async function (dataTable) {
     const table = dataTable.hashes();
     user = [];
     for (const row of table) {
-        const email_aleatorio = !row['Email'] ? "" : Date.now() + row['Email'];
+        //const email_aleatorio = !row['Email'] ? "" : Date.now() + row['Email'];
         user.push({
             firstName: row['FirstName'],
             lastName: row['LastName'],
-            email: email_aleatorio,
+            email: row['Email'],
             password: row['Password'],
             confirmPassword: row['ConfirmPassword'],
         });
