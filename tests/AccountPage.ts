@@ -44,7 +44,7 @@ export class AccountPage {
       this.idPasswordError = 'id=password-error'
       this.actionSubmit = '.action.submit.primary';
       this.urlCreateAccount = 'https://magento.softwaretestingboard.com/customer/account/create/';
-      this.passwordFillout = 'SBTEhMelhorqueAGloboForEv3er';
+      this.passwordFillout = 'SBTEhMelhorqueAGloboForEv3erSBTEhMelhorqueAGloboForEv3er';
       this.errorMessage = ".message-error.error.message";
       this.successMessage = ".message-success.success.message";
       this.passwordErrorConfimation = "#password-confirmation-error";
@@ -136,7 +136,7 @@ export class AccountPage {
         return await this.validMessage(page, this.passwordStrnghtMeterLabel, this.mediumPassword)
     }
 
-    private async validMessage(page, messageElementIn: string, mensagemEsperadaIn: string) {
+    private async validMessage(page, messageElementIn: string, mensagemEsperadaIn: string)  {
         try {
             const messageElement = await page.locator(messageElementIn);
             const mensagemEsperada = mensagemEsperadaIn;
