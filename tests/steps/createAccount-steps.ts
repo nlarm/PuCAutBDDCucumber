@@ -31,7 +31,7 @@ Given('acessar pagína de Create an Account', { timeout: 10000 }, async function
     await accountPage.navigateCreatAccount()
 });
 
-When('o formulario é submetido com os dados onde o email contera a data e hora atual para ser único', async function (dataTable) {
+When('o formulario é submetido com os dados onde o email contera a data e hora atual para ser único', { timeout: 10000 }, async function (dataTable) {
     const accountPage = new AccountPage(page);
 
     const table = dataTable.hashes();

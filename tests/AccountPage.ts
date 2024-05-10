@@ -77,14 +77,19 @@ export class AccountPage {
         await this.page.locator(this.email).fill(email);
         await this.page.locator(this.password).fill(password);
         await this.page.locator(this.confirmPassword).fill(confirmPassword);
+        await this.page.waitForTimeout(2000);
+        await this.page.waitForLoadState()
     }
 
     async fillOutFormDto(userDTO: UserDTO) {
-        await this.page.getByLabel(this.firstName).fill(userDTO.firstName);
-        await this.page.getByLabel(this.lastName).fill(userDTO.lastName);
-        await this.page.locator(this.email).fill(userDTO.email);
-        await this.page.locator(this.password).fill(userDTO.password);
-        await this.page.locator(this.confirmPassword).fill(userDTO.confirmPassword);
+        await this.fillOutForm(userDTO.firstName, userDTO.lastName, userDTO.email, userDTO.password, userDTO.confirmPassword)
+        // await this.page.getByLabel(this.firstName).fill(userDTO.firstName);
+        // await this.page.getByLabel(this.lastName).fill(userDTO.lastName);
+        // await this.page.locator(this.email).fill(userDTO.email);
+        // await this.page.locator(this.password).fill(userDTO.password);
+        // await this.page.locator(this.confirmPassword).fill(userDTO.confirmPassword);
+        // await this.page.waitForTimeout(2000);
+        // await this.page.waitForLoadState()
     }
   
     async clickSubmit() {
